@@ -1,0 +1,18 @@
+.entry-content {
+
+	img {
+		box-shadow: 0 10px 25px -4px rgba($black, 0.2);
+		margin: 0.5em 1em 1.5em 1em;
+	}
+
+	.orbit img {
+		margin:0 ;
+	}
+
+	img.alignright {
+		padding: 0;
+	}
+	img.alignleft {
+		padding: 0;
+	}
+}

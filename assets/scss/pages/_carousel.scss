@@ -1,0 +1,49 @@
+/* *** UNTERSTÜTZER *** */
+.supporter {
+    display: table;
+    width: 46%;
+    min-width: 300px;
+    margin: 10px 1%;
+    padding: 10px 1%;
+    float: left;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 580px) {
+      float: none;
+      margin: 5px auto;
+  }
+
+  p, br {
+    display: none;
+  }
+
+  &:hover {
+    box-shadow: 0 1px 4px rgba($primary-color, 0.3);
+  }
+
+  a, div {
+    height: 100px;
+  }
+
+  a {
+    float: left;
+    line-height: 100px;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  div {
+    width: 60%;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 0.9em;
+    padding: 0px 15px;
+  }
+}
+/* *** UNTERSTÜTZER ENDE *** */

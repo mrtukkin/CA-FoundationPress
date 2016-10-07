@@ -6,3 +6,21 @@
 [data-whatinput="touch"] a:focus, button:focus {
   outline: none;
 }
+
+article a {
+    transition: text-shadow 0.2s;
+    position: relative;
+
+	&:hover {
+	}
+}
+
+%headings a {
+	color: $header-color;
+	text-shadow: none;
+
+	&:hover {
+		color: $header-color;
+		text-shadow: none;
+	}
+}

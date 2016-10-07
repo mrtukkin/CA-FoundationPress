@@ -1,4 +1,35 @@
 // Page header
+.home #masthead nav {
+	height: 100vh;
+	max-height: 700px;
+
+	.top-bar-title {
+		top: 10vh;
+	}
+
+	.top-bar-right {
+		bottom: 30vh;
+		top: initial;
+	}
+}
+
+.home section.intro {
+  @include grid-row();
+  margin-top: 3rem;
+
+  .entry-content {
+    @include breakpoint(small) {
+      @include grid-column(12);
+    }
+
+    @include breakpoint(medium) {
+      @include grid-column(12);
+    }
+  }
+
+}
+
+
 #front-hero {
 	.marketing {
 		@include grid-row();
@@ -111,101 +142,5 @@
 	}
 
 	.download { margin-top: rem-calc(20); }
-
-}
-
-// Intro
-.intro {
-	@include grid-row();
-
-	.fp-intro {
-
-		@include breakpoint(small) {
-			@include grid-column(12);
-		}
-
-		@include breakpoint(medium) {
-			@include grid-column(10);
-			@include grid-column-offset(1);
-
-			h2 {
-				font-weight: 300;
-				margin-bottom: 1.5rem;
-			}
-
-			h4 {
-				font-size: 1.125rem;
-				line-height: 1.6;
-				color: #777;
-				margin-bottom: 2rem;
-			}
-
-		}
-	}
-}
-
-// Section divider
-.section-divider {
-	@include grid-row();
-
-	hr {
-		@include grid-column(12);
-		@extend .dotted;
-		box-sizing: border-box;
-	}
-}
-
-
-// Benefits
-.benefits {
-	@include grid-row();
-	text-align: center;
-
-	header {
-		@include grid-column(12);
-
-		h2 {
-			font-weight: 300;
-		}
-
-		h4 {
-			font-size: 1.125rem;
-			line-height: 1.6;
-			color: #777;
-		}
-	}
-
-	.semantic,
-	.responsive,
-	.customizable,
-	.professional {
-		@include breakpoint(small) {
-			@include grid-column(12);
-		}
-
-		@include breakpoint(medium) {
-			@include grid-column(3);
-		}
-
-		img {
-			padding: 1.25rem;
-    	margin: 1rem auto 0 auto;
-		}
-
-		h3 {
-			color: #0a0a0a;
-			font-weight: 300;
-			font-size: 1.75rem;
-		}
-
-		p { font-size: 0.9375rem; }
-
-	}
-
-	.why-foundation {
-		@include grid-row();
-		@include grid-column(12);
-		margin-top: 4rem;
-	}
 
 }

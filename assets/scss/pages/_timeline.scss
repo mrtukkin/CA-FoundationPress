@@ -1,0 +1,89 @@
+/* *** TIMELINE *** */
+.timeline {
+  position: relative;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 47.4%;
+  padding-left: 40px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 16px;
+    height: 100%;
+    width: 36px;
+    z-index: -1;
+    background: $dark-gray;
+    border-radius: 3px; }
+
+  @media (max-width: 550px) {
+      margin: auto 0px auto auto;
+  }
+
+  date {
+    position: absolute;
+    left: -57px;
+    bottom: 0.95em;
+    width: 42px;
+    height: 1em;
+    text-align: center;
+    font-size: 1.1em;
+    color: $white;
+    z-index: -1;
+    text-shadow: 0 1px 0 $black;
+
+    &.year {
+      position: static;
+      display: inline-block;
+      font-size: 18px;
+      width: 60px;
+      height: 60px;
+      line-height: 50px;
+      background: $dark-gray;
+      border: 5px solid $white;
+      margin: 0 0 80px -37px;
+      border-radius: 2px;
+    }
+  }
+
+  li {
+    list-style-type: none;
+    margin-bottom: 35px;
+    margin-left: 30px;
+    position: relative;
+
+    span {
+      position: relative;
+      display: inline-block;
+      background: $white;
+      border-radius: 4px;
+      margin-left: 8px;
+      font-size: 1.0em;
+      max-width: 400px;
+      padding: 20px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+      line-height: 1.2em;
+
+      i {
+        font-style: normal;
+        font-weight: $global-weight-bold;
+        position: relative;
+        font-size: 14px;
+      }
+
+      img {
+        max-width: 400px;
+        max-height: 300px;
+      }
+
+      img, iframe {
+        position: absolute;
+        right: 100%;
+        margin-right: 95px;
+        margin-top: -100px;
+      }
+    }
+  }
+}
+/* *** TIMELINE ENDE *** */

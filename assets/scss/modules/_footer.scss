@@ -4,6 +4,7 @@
 	margin: 0 auto;
 	border-top: 1px solid #ccc;
 	margin-top: rem-calc(60);
+	background: $secondary-color;
 
 	#footer {
 		@include grid-row();

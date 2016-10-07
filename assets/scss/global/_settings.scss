@@ -41,39 +41,44 @@
 //  36. Top Bar
 
 @import '../../components/foundation-sites/scss/util/util';
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Wire+One';
 
 // 1. Global
 // ---------
-
-$global-font-size: 100%;
-$global-width: rem-calc(1200);
-$global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #2199e8,
-  secondary: #777,
-  success: #3adb76,
-  warning: #ffae00,
-  alert: #ec5840,
+  primary: #d40000,
+  secondary: rgba(44,142,171,1),
+  success: #32B721,
+  warning: #B75B21,
+  alert: #6A1209,
 );
-$light-gray: #e6e6e6;
+@include add-foundation-colors;
+
+$light-gray: #f9f0ee;
 $medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
-$black: #0a0a0a;
-$white: #fefefe;
+//$dark-gray: #8a8a8a;
+$dark-gray: #444;
+$black: #111;
+$white: #fafafa;
+
+$global-width: rem-calc(900);
 $body-background: $white;
-$body-font-color: $black;
-$body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 $body-antialiased: true;
+
+$body-font-family: -apple-system, BlinkMacSystemFont, 'Source Sans Pro', sans-serif;
+$body-font-color: $black;
+$global-font-size: 100%;
+$global-lineheight: 1.5;
+$global-weight-normal: normal;
+$global-weight-bold: 600;
+$global-text-direction: ltr;
+
 $global-margin: 1rem;
 $global-padding: 1rem;
-$global-weight-normal: normal;
-$global-weight-bold: bold;
 $global-radius: 0;
-$global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
 
-@include add-foundation-colors;
 
 // 2. Breakpoints
 // --------------
@@ -84,6 +89,7 @@ $breakpoints: (
   large: 1024px,
   xlarge: 1200px,
   xxlarge: 1440px,
+  inf: 15000px,
 );
 $breakpoint-classes: (small medium large);
 
@@ -102,69 +108,75 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: $body-font-family;
-$header-font-weight: $global-weight-normal;
-$header-font-style: normal;
-$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
+// ------------------
+$font-family-monospace: monospace;
+
+$header-font-family: 'Wire One', sans-serif;
+$header-font-weight: normal;
 $header-sizes: (
   small: (
-    'h1': 24,
-    'h2': 20,
-    'h3': 19,
-    'h4': 18,
-    'h5': 17,
-    'h6': 16,
+    'h1': 45,
+    'h2': 40,
+    'h3': 35,
+    'h4': 32,
+    'h5': 30,
+    'h6': 28,
   ),
   medium: (
-    'h1': 48,
-    'h2': 40,
-    'h3': 31,
-    'h4': 25,
-    'h5': 20,
-    'h6': 16,
+    'h1': 64,
+    'h2': 50,
+    'h3': 40,
+    'h4': 30,
+    'h5': 25,
+    'h6': 25,
   ),
 );
-$header-color: inherit;
+$header-color: $black;
 $header-lineheight: 1.4;
-$header-margin-bottom: 0.5rem;
-$header-text-rendering: optimizeLegibility;
+$header-margin-top: 3rem;
+$header-margin-bottom: 0.1rem;
 $small-font-size: 80%;
-$header-small-font-color: $medium-gray;
+$header-small-font-color: $black;
+
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
-$paragraph-text-rendering: optimizeLegibility;
+
 $code-color: $black;
-$code-font-family: $font-family-monospace;
-$code-font-weight: $global-weight-normal;
 $code-background: $light-gray;
 $code-border: 1px solid $medium-gray;
 $code-padding: rem-calc(2 5 1);
-$anchor-color: $primary-color;
-$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
-$anchor-text-decoration: none;
-$anchor-text-decoration-hover: none;
+
+$anchor-color: $secondary-color;
+$anchor-color-hover: $anchor-color;
+
 $hr-width: $global-width;
 $hr-border: 1px solid $medium-gray;
 $hr-margin: rem-calc(20) auto;
+
 $list-lineheight: $paragraph-lineheight;
 $list-margin-bottom: $paragraph-margin-bottom;
 $list-style-type: disc;
 $list-style-position: outside;
 $list-side-margin: 1.25rem;
 $list-nested-side-margin: 1.25rem;
+
 $defnlist-margin-bottom: 1rem;
 $defnlist-term-weight: $global-weight-bold;
 $defnlist-term-margin-bottom: 0.3rem;
+
 $blockquote-color: $dark-gray;
 $blockquote-padding: rem-calc(9 20 0 19);
 $blockquote-border: 1px solid $medium-gray;
+
 $cite-font-size: rem-calc(13);
 $cite-color: $dark-gray;
+
 $keystroke-font: $font-family-monospace;
 $keystroke-color: $black;
 $keystroke-background: $light-gray;
 $keystroke-padding: rem-calc(2 4 0);
 $keystroke-radius: $global-radius;
+
 $abbr-underline: 1px dotted $black;
 
 // 5. Typography Helpers
@@ -178,17 +190,6 @@ $subheader-font-weight: $global-weight-normal;
 $subheader-margin-top: 0.2rem;
 $subheader-margin-bottom: 0.5rem;
 $stat-font-size: 2.5rem;
-
-// 6. Abide
-// --------
-
-$abide-inputs: true;
-$abide-labels: true;
-$input-background-invalid: $alert-color;
-$form-label-color-invalid: $alert-color;
-$input-error-color: $alert-color;
-$input-error-font-size: rem-calc(12);
-$input-error-font-weight: $global-weight-bold;
 
 // 7. Accordion
 // ------------
@@ -208,15 +209,6 @@ $accordion-content-padding: 1rem;
 
 $accordionmenu-arrows: true;
 $accordionmenu-arrow-color: $primary-color;
-
-// 9. Badge
-// --------
-
-$badge-background: $primary-color;
-$badge-color: foreground($badge-background);
-$badge-padding: 0.3em;
-$badge-minwidth: 2.1em;
-$badge-font-size: 0.6rem;
 
 // 10. Breadcrumbs
 // ---------------
@@ -269,25 +261,6 @@ $callout-font-color: $body-font-color;
 $callout-font-color-alt: $body-background;
 $callout-radius: $global-radius;
 $callout-link-tint: 30%;
-
-// 14. Close Button
-// ----------------
-
-$closebutton-position: right top;
-$closebutton-offset-horizontal: 1rem;
-$closebutton-offset-vertical: 0.5rem;
-$closebutton-size: 2em;
-$closebutton-lineheight: 1;
-$closebutton-color: $dark-gray;
-$closebutton-color-hover: $black;
-
-// 15. Drilldown
-// -------------
-
-$drilldown-transition: transform 0.15s linear;
-$drilldown-arrows: true;
-$drilldown-arrow-color: $primary-color;
-$drilldown-background: $white;
 
 // 16. Dropdown
 // ------------
@@ -380,7 +353,7 @@ $menu-margin: 0;
 $menu-margin-nested: 1rem;
 $menu-item-padding: 0.7rem 1rem;
 $menu-item-color-active: $white;
-$menu-item-background-active: #121212;
+$menu-item-background-active: transparent;
 $menu-icon-spacing: 0.25rem;
 
 // 23. Meter
@@ -410,14 +383,14 @@ $maincontent-shadow: 0 0 10px rgba($black, 0.5);
 // ---------
 
 $orbit-bullet-background: $medium-gray;
-$orbit-bullet-background-active: $dark-gray;
+$orbit-bullet-background-active: $secondary-color;
 $orbit-bullet-diameter: 1.2rem;
 $orbit-bullet-margin: 0.1rem;
 $orbit-bullet-margin-top: 0.8rem;
 $orbit-bullet-margin-bottom: 0.8rem;
 $orbit-caption-background: rgba($black, 0.5);
 $orbit-caption-padding: 1rem;
-$orbit-control-background-hover: rgba($black, 0.5);
+$orbit-control-background-hover: rgba($light-gray, 0.9);
 $orbit-control-padding: 1rem;
 $orbit-control-zindex: 10;
 
@@ -437,58 +410,6 @@ $pagination-item-color-disabled: $medium-gray;
 $pagination-ellipsis-color: $black;
 $pagination-mobile-items: false;
 $pagination-arrows: true;
-
-// 27. Progress Bar
-// ----------------
-
-$progress-height: 1rem;
-$progress-background: $medium-gray;
-$progress-margin-bottom: $global-margin;
-$progress-meter-background: $primary-color;
-$progress-radius: $global-radius;
-
-// 28. Reveal
-// ----------
-
-$reveal-background: $white;
-$reveal-width: 600px;
-$reveal-max-width: $global-width;
-$reveal-offset: rem-calc(100);
-$reveal-padding: $global-padding;
-$reveal-border: 1px solid $medium-gray;
-$reveal-radius: $global-radius;
-$reveal-zindex: 1005;
-$reveal-overlay-background: rgba($black, 0.45);
-
-// 29. Slider
-// ----------
-
-$slider-height: 0.5rem;
-$slider-width-vertical: $slider-height;
-$slider-background: $light-gray;
-$slider-fill-background: $medium-gray;
-$slider-handle-height: 1.4rem;
-$slider-handle-width: 1.4rem;
-$slider-handle-background: $primary-color;
-$slider-opacity-disabled: 0.25;
-$slider-radius: $global-radius;
-$slider-transition: all 0.2s ease-in-out;
-
-// 30. Switch
-// ----------
-
-$switch-background: $medium-gray;
-$switch-background-active: $primary-color;
-$switch-height: 2rem;
-$switch-height-tiny: 1.5rem;
-$switch-height-small: 1.75rem;
-$switch-height-large: 2.5rem;
-$switch-radius: $global-radius;
-$switch-margin: $global-margin;
-$switch-paddle-background: $white;
-$switch-paddle-offset: 0.25rem;
-$switch-paddle-radius: $global-radius;
-$switch-paddle-transition: all 0.25s ease-out;
 
 // 31. Table
 // ---------
@@ -535,7 +456,7 @@ $thumbnail-radius: $global-radius;
 // 34. Title Bar
 // -------------
 
-$titlebar-background: $black;
+$titlebar-background: $primary-color;
 $titlebar-color: $white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
@@ -558,8 +479,8 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0;
-$topbar-background: #121212;
+$topbar-background: transparent;
 $topbar-submenu-background: $topbar-background;
 $topbar-link-color: #fff;
 $topbar-input-width: 200px;
-$topbar-unstack-breakpoint: medium;
+$topbar-unstack-breakpoint: inf;

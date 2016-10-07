@@ -1,0 +1,28 @@
+//Orbit
+.orbit {
+	.orbit-next, .orbit-previous {
+		font-size: 2rem;
+		color: $dark-gray;
+	}
+
+	&.citations {
+		.orbit-slide {
+			@include grid-row();
+
+			.orbit-img {
+				@include grid-column(4);
+				max-height: inherit;
+
+				img {
+					max-height: inherit;
+					max-width: 100%;
+				}
+			}
+
+			blockquote {
+				@include grid-column(8);
+
+			}
+		}
+	}
+}

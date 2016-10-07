@@ -35,11 +35,15 @@
 			</div>
 		</div>
 
-		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
-			<div class="top-bar-left">
+		<nav id="site-navigation" class="main-navigation top-bar" role="navigation" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/assets/images/header-bg.jpg')" >
+			<div class="top-bar-title">
+				<?php if ( function_exists( 'the_custom_logo' ) ): ?>
+					<?php the_custom_logo(); ?>
+				<?php else: ?>
 				<ul class="menu">
 					<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
 				</ul>
+				<?php endif; ?>
 			</div>
 			<div class="top-bar-right">
 				<?php foundationpress_top_bar_r(); ?>

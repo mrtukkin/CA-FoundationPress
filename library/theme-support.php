@@ -32,6 +32,15 @@ function foundationpress_theme_support() {
 	// RSS thingy
 	add_theme_support( 'automatic-feed-links' );
 
+	add_theme_support( 'custom-logo', array(
+    	'height'      => 300,
+    	'width'       => 478,
+    	'flex-height' => true,
+    	'flex-width'  => true,
+    	'header-text' => array( 'site-title', 'site-description' ),
+	) );
+
+
 	// Add post formats support: http://codex.wordpress.org/Post_Formats
 	add_theme_support( 'post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat') );
 

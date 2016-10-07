@@ -26,20 +26,13 @@
 
 // Individual foundation components
 @include foundation-grid;
-// @include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
 @include foundation-range-input;
-@include foundation-accordion;
-@include foundation-accordion-menu;
-@include foundation-badge;
 @include foundation-breadcrumbs;
 @include foundation-button-group;
-@include foundation-callout;
 @include foundation-close-button;
-@include foundation-drilldown-menu;
-@include foundation-dropdown;
 @include foundation-dropdown-menu;
 @include foundation-flex-video;
 @include foundation-label;
@@ -48,13 +41,7 @@
 @include foundation-off-canvas;
 @include foundation-orbit;
 @include foundation-pagination;
-@include foundation-progress-bar;
-@include foundation-progress-element;
 @include foundation-meter-element;
-@include foundation-slider;
-@include foundation-sticky;
-@include foundation-reveal;
-@include foundation-switch;
 @include foundation-table;
 @include foundation-tabs;
 @include foundation-thumbnail;
@@ -64,7 +51,6 @@
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 @include foundation-menu-icon;
-// @include foundation-flex-classes;
 
 // Motion UI
 @include motion-ui-transitions;
@@ -74,11 +60,15 @@
   My custom styles:
   Add your scss files below to structure your project styles
 */
+// Helper
+@import "helpers/selectors";
+
+// Global stuff
+@import "global/typography";
 
 // Modules
 @import "modules/navigation";
 @import "modules/footer";
-@import "modules/sidebar";
 @import "modules/editor-style";
 
 // Components
@@ -86,6 +76,8 @@
 @import "components/featured-image";
 @import "components/dividers";
 @import "components/links";
+@import "components/media";
+@import "components/orbit";
 
 // Templates
 @import "templates/front";
@@ -94,3 +86,7 @@
 @import "templates/page-sidebar-left";
 @import "templates/page-full-width";
 @import "templates/single-post";
+
+// Specific pages
+@import "pages/carousel";
+@import "pages/timeline";
