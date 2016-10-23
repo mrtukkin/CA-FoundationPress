@@ -60,8 +60,8 @@ if ( ! function_exists( 'foundationpress_mobile_nav' ) ) {
 */
 if ( ! function_exists( 'foundationpress_add_menuclass' ) ) {
 	function foundationpress_add_menuclass( $ulclass ) {
-		$find = array('/<a rel="button"/', '/<a title=".*?" rel="button"/');
-		$replace = array('<a rel="button" class="button"', '<a rel="button" class="button"');
+		$find = array( '/<a rel="button"/', '/<a title=".*?" rel="button"/' );
+		$replace = array( '<a rel="button" class="button"', '<a rel="button" class="button"' );
 
 		return preg_replace( $find, $replace, $ulclass, 1 );
 	}
@@ -218,12 +218,12 @@ if ( ! function_exists( 'foundationpress_breadcrumb' ) ) {
 
 				// 404 page
 				echo '<li>Error 404</li>';
-			}
+			} // End if().
 		} else {
 			if ( $showhome ) {
 				echo '<li class="item-home current">' . $home_title . '</li>';
 			}
-		}
+		} // End if().
 		echo '</ul>';
 	}
-}
+} // End if().

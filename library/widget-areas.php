@@ -6,8 +6,8 @@
  * @since FoundationPress 1.0.0
  */
 
-if ( ! function_exists( 'foundationpress_sidebar_widgets' ) ) :
-function foundationpress_sidebar_widgets() {
+if ( ! function_exists( 'foundpresscollac_sidebar_widgets' ) ) :
+function foundpresscollac_sidebar_widgets() {
 	register_sidebar(array(
 	  'id' => 'footer-widgets',
 	  'name' => __( 'Footer widgets', 'foundationpress' ),
@@ -19,5 +19,5 @@ function foundationpress_sidebar_widgets() {
 	));
 }
 
-add_action( 'widgets_init', 'foundationpress_sidebar_widgets' );
+add_action( 'widgets_init', 'foundpresscollac_sidebar_widgets' );
 endif;

@@ -51,4 +51,4 @@ require_once( 'library/responsive-images.php' );
 // require_once( 'library/protocol-relative-theme-assets.php' );
 
 
-remove_filter ('the_content', 'wpautop');
+remove_filter('the_content', 'wpautop');

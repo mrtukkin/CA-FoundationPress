@@ -1,6 +1,6 @@
 // Page header
 .home #masthead nav {
-	height: 100vh;
+	height: 80vh;
 	max-height: 700px;
 
 	.top-bar-title {
@@ -14,18 +14,49 @@
 }
 
 .home section.intro {
-  @include grid-row();
-  margin-top: 3rem;
+	@include grid-row();
+	margin-top: 3rem;
 
-  .entry-content {
-    @include breakpoint(small) {
-      @include grid-column(12);
+  	.entry-content {
+    	@include breakpoint(small) {
+      	@include grid-column(12);
     }
 
-    @include breakpoint(medium) {
-      @include grid-column(12);
-    }
-  }
+    	@include breakpoint(medium) {
+      		@include grid-column(12);
+    	}
+  	}
+
+
+  	.row {
+  		//background: rgba(navy, 0.4);
+  		margin-bottom: 8rem;
+
+  		.columns {
+  			min-height: 200px;
+  			//background: rgba(orange, 0.5);
+  			text-align: right;
+
+  			&.iconog {
+  				//background: rgba(red, 0.7);
+  				position: relative;
+
+  				img {
+  					transform-origin: center;
+  					max-width: 80%;
+  					transition: 0.5s;
+  				}
+  			}
+  		}
+
+  		&:hover .iconog img {
+  			transform: rotate(5deg);
+  		}
+
+  		.iconog + .columns {
+  			text-align: left;
+  		}
+  	}
 
 }
 

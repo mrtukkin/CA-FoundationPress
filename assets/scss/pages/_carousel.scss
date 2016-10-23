@@ -1,49 +1,34 @@
 /* *** UNTERSTÜTZER *** */
 .supporter {
-    display: table;
-    width: 46%;
-    min-width: 300px;
-    margin: 10px 1%;
+    @include grid-column(12);
+
+    @include breakpoint(medium) {
+      @include grid-column(6);
+    }
+
     padding: 10px 1%;
-    float: left;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-
-  @media (max-width: 580px) {
-      float: none;
-      margin: 5px auto;
-  }
-
-  p, br {
-    display: none;
-  }
+    //box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 
   &:hover {
-    box-shadow: 0 1px 4px rgba($primary-color, 0.3);
-  }
-
-  a, div {
-    height: 100px;
+    box-shadow: 0 1px 4px rgba($secondary-color, 0.3);
   }
 
   a {
-    float: left;
-    line-height: 100px;
+    @include grid-column(5, 0);
+    height: 100px;
   }
 
   img {
-    max-width: 100%;
+    @include absolute-center;
     max-height: 100%;
+    max-width: 100%;
     margin: 0;
-    padding: 0;
     box-shadow: none;
   }
 
   div {
-    width: 60%;
-    display: table-cell;
-    vertical-align: middle;
+    @include grid-column(7, 10px);
     font-size: 0.9em;
-    padding: 0px 15px;
   }
 }
 /* *** UNTERSTÜTZER ENDE *** */

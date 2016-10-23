@@ -46,8 +46,8 @@
 // 1. Global
 // ---------
 $foundation-palette: (
-  primary: #d40000,
-  secondary: rgba(44,142,171,1),
+  primary: rgb(183, 27, 33),
+  secondary: rgba(74,178,158,1),
   success: #32B721,
   warning: #B75B21,
   alert: #6A1209,
@@ -59,7 +59,8 @@ $medium-gray: #cacaca;
 //$dark-gray: #8a8a8a;
 $dark-gray: #444;
 $black: #111;
-$white: #fafafa;
+//$white: #fafafa;
+$white: white;
 
 $global-width: rem-calc(900);
 $body-background: $white;
