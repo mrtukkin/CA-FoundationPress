@@ -41,13 +41,24 @@
 //  36. Top Bar
 
 @import '../../components/foundation-sites/scss/util/util';
-@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Wire+One';
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600';
+
+@font-face {
+  font-family: 'The Hand';
+  font-style: normal;
+  font-weight: 400;
+  src: local('The Hand'), local('TheHand'), url(https://collegiumacademicum.de/web/wp-content/themes/foundationpress_2016-10-06_14-16/assets/fonts/the-hand-regular-9nov.otf) format('truetype');
+}
 
 // 1. Global
 // ---------
 $foundation-palette: (
-  primary: rgb(183, 27, 33),
-  secondary: rgba(74,178,158,1),
+  primary: #B61C20, // CMYK: 0, 85.25, 81.97, 28.24
+  // LOGO: primary: #B71B21, // CMYK: 0, 85.25, 81.97, 28.24
+  // OLD: primary: #B71E24, // CMYK: 0, 85.25, 81.97, 28.24
+  secondary: #32ACA2, // CMYK: 58.43, 0, 11.24, 30.2
+  // LOGO: secondary: #4AB29E, // CMYK: 58.43, 0, 11.24, 30.2
+  // OLD: secondary: #4AB29E, // CMYK: 58.43, 0, 11.24, 30.2
   success: #32B721,
   warning: #B75B21,
   alert: #6A1209,
@@ -112,7 +123,7 @@ $block-grid-max: 8;
 // ------------------
 $font-family-monospace: monospace;
 
-$header-font-family: 'Wire One', sans-serif;
+$header-font-family: 'The Hand', sans-serif;
 $header-font-weight: normal;
 $header-sizes: (
   small: (
@@ -133,9 +144,9 @@ $header-sizes: (
   ),
 );
 $header-color: $black;
-$header-lineheight: 1.4;
-$header-margin-top: 3rem;
-$header-margin-bottom: 0.1rem;
+$header-lineheight: 1;
+$header-margin-top: 2rem;
+$header-margin-bottom: 0.2rem;
 $small-font-size: 80%;
 $header-small-font-color: $black;
 

@@ -1,21 +1,26 @@
 // Page header
-.home #masthead nav {
-	height: 80vh;
-	max-height: 700px;
+//.home #masthead nav {
+//	height: 80vh;
+//	max-height: 700px;
+//
+//	.top-bar-title {
+//		top: 10vh;
+//	}
+//
+//	.top-bar-right {
+//		bottom: 30vh;
+//		top: initial;
+//	}
+//}
 
-	.top-bar-title {
-		top: 10vh;
-	}
-
-	.top-bar-right {
-		bottom: 30vh;
-		top: initial;
-	}
+.home .container {
+   overflow: hidden;
 }
 
 .home section.intro {
 	@include grid-row();
 	margin-top: 3rem;
+   overflow: visible;
 
   	.entry-content {
     	@include breakpoint(small) {
@@ -27,151 +32,121 @@
     	}
   	}
 
+   h1 {
+      font-size: 4rem;
+      line-height: 1.2;
+
+      .red, .blue {
+         color: $white;
+         padding: 0.5rem 1rem 0;
+      }
+
+      .red {
+         background: $primary-color;
+      }
+
+      .blue {
+         background: $secondary-color;
+      }
+   }
+
+   .flex-video {
+      overflow: visible;
+      position: relative;
+
+      &::before, &::after {
+         content: '';
+         display: block;
+         position: absolute;
+         background-size: 100% 100%;
+      }
+
+      &::after {
+         left: 77%;
+         top: 76%;
+         width: 50%;
+         height: 50%;
+      }
+
+      &::before {
+         left: -14%;
+         top: -15%;
+         width: 50%;
+         height: 50%;
+      }
+   }
 
   	.row {
-  		//background: rgba(navy, 0.4);
-  		margin-bottom: 8rem;
+      position: relative;
+      margin-bottom: 3rem;
 
-  		.columns {
-  			min-height: 200px;
-  			//background: rgba(orange, 0.5);
-  			text-align: right;
+      h2 {
+         background: $secondary-color;
+         transition: 0.3s;
+         // border-color: $secondary-color;
+         // border-width: 3px 3px 0 3px;
+         // border-style: dashed;
+         font-size: 5rem;
+         color: $white;
+         // color: $black;
+         padding-top: 0.3em;
 
-  			&.iconog {
-  				//background: rgba(red, 0.7);
-  				position: relative;
+         &:hover {
+            background: $primary-color;
+            // border-color: $primary-color;
+         }
 
-  				img {
-  					transform-origin: center;
-  					max-width: 80%;
-  					transition: 0.5s;
-  				}
-  			}
-  		}
+         &::after {
+            @include breakpoint(medium) {
+               @include grid-column(5);
+          	}
+            content: '';
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: 50% 50%;
+         }
+      }
 
-  		&:hover .iconog img {
-  			transform: rotate(5deg);
-  		}
+      img {
+         position: absolute;
+         top: 3rem;
+         right: 0;
+      }
 
-  		.iconog + .columns {
-  			text-align: left;
-  		}
+      p {
+         padding-top: 1rem;
+         background: transparent;
+         line-height: 1.8;
+         text-align: right;
+      }
+
+      &.wohnen, &.nachhaltigkeit {
+         h2 {
+            padding-left: 5rem;
+
+            &::after {
+               right: 0.5rem;
+               height: 15rem;
+               top: 3rem;
+            }
+         }
+         p {
+            text-align: left;
+         }
+      }
+
+      &.bildung, &.selbstverwaltung {
+         h2 {
+            padding-right: 4rem;
+            text-align: right;
+
+            &::after {
+               left: 0.5rem;
+               height: 15rem;
+               top: 3rem;
+            }
+         }
+      }
   	}
-
-}
-
-
-#front-hero {
-	.marketing {
-		@include grid-row();
-		max-width: 55rem;
-	}
-
-	@include breakpoint(small) {
-		background: url('../images/demo/hero-bg-foundation-6-small.svg') bottom center;
-		background-size: cover;
-		background-position: bottom;
-		padding: rem-calc(65%) 0;
-		margin: 0 0 rem-calc(32);
-		height: auto;
-		position: relative;
-		text-align: left;
-	}
-
-	@include breakpoint(medium) {
-		background: url('../images/demo/hero-bg-foundation-6-large.svg') bottom center;
-		background-size: cover;
-		background-position: center;
-		height: rem-calc(685);
-		margin: 0 0 rem-calc(72);
-	}
-
-	#watch {
-
-		@include breakpoint(small) {
-			@include grid-column(7);
-			@include grid-column-position(-5);
-		}
-
-		@include breakpoint(medium) {
-			@include grid-column(12);
-			@include grid-column-position(0);
-		}
-
-		section {
-			display: inline;
-		}
-
-		a {
-			color: #B4C9D1;
-			cursor: pointer;
-			font-weight: 400;
-			margin-right: rem-calc(20);
-		}
-
-		a:hover {
-			color: #fff;
-		}
-
-		#stargazers {
-			:before {
-				content: "\f09b";
-				font-family: FontAwesome;
-				font-style: normal;
-				font-weight: normal;
-				text-decoration: inherit;
-				color: #B4C9D1;
-				margin-right: rem-calc(8);
-			}
-		}
-
-		#twitter {
-			:before {
-				content: "\f099";
-				font-family: FontAwesome;
-				font-style: normal;
-				font-weight: normal;
-				text-decoration: inherit;
-				color: #B4C9D1;
-				margin-right: rem-calc(8);
-			}
-		}
-
-	}
-
-	.tagline {
-
-		@include breakpoint(small) {
-			@include grid-column(8);
-		}
-
-		@include breakpoint(medium) {
-			@include grid-column(5);
-			padding-top: 6rem;
-		}
-
-	}
-
-	h1 {
-		color: #fff;
-		font-weight: 500;
-
-		@include breakpoint(small) {
-			font-size: 2.2rem;
-		}
-
-		@include breakpoint(medium) {
-			font-size: 2.875rem;
-		}
-
-	}
-
-	h4 {
-		color: #fefefe;
-		font-weight: 300;
-		font-size: 1.3125rem;
-	}
-
-	.download { margin-top: rem-calc(20); }
-
 }
