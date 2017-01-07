@@ -11,7 +11,7 @@
 ?>
 
 		</section>
-		<div id="footer-container">
+		<div id="footer-container" style="background-image: url('<?php echo get_bloginfo('template_url') ?>/assets/images/header-bg.jpg')" >
 			<footer id="footer">
 				<?php do_action( 'foundationpress_before_footer' ); ?>
 				<?php dynamic_sidebar( 'footer-widgets' ); ?>
@@ -30,10 +30,5 @@
 
 <?php wp_footer(); ?>
 <?php do_action( 'foundationpress_before_closing_body' ); ?>
-<script id="__bs_script__">//<![CDATA[
-    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.16.0'><\/script>".replace("HOST", location.hostname));
-//]]></script><script id="__bs_script__">//<![CDATA[
-    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.16.0'><\/script>".replace("HOST", location.hostname));
-//]]></script>
 </body>
 </html>

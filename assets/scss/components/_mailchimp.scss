@@ -1,0 +1,37 @@
+.mc_custom_border_hdr {
+  text-align: center;
+  margin-top: 6rem;
+  font-size: 2rem;
+  @include breakpoint(large){
+    font-size: 4rem;
+  }
+
+}
+
+#mc_signup {
+  .mc_var_label {
+    display: none;
+  }
+
+  #mc_signup_submit {
+    width: 100%;
+  }
+
+  @include grid-column(8, 0);
+  @include grid-column-position(2);
+  float: none!important;
+
+  .mc_merge_var, .mc_signup_submit {
+    @include grid-column(12, 0);
+  }
+
+  @include breakpoint(medium) {
+      .mc_merge_var {
+        @include grid-column(7, 0);
+      }
+
+      .mc_signup_submit {
+        @include grid-column(5, 0);
+      }
+  }
+}

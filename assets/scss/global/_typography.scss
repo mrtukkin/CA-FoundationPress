@@ -6,3 +6,9 @@
 %headings {
   margin-top: $header-margin-top;
 }
+
+li > cite,
+li > .mjp-s-wrapper .wrap_inline_mp3j,
+li > .flex-video {
+  margin-left: 2em;
+}

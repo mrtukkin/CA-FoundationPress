@@ -1,12 +1,19 @@
 .entry-content {
 
 	iframe, img {
-		border: solid 4px $white;
-		box-shadow: 0 0 0 1px rgba($black, 0.2);
+    border: $thumbnail-border;
+    margin-bottom: $thumbnail-margin-bottom;
+    box-shadow: $thumbnail-shadow;
+
+    &.paypal {
+      border: none;
+      box-shadow: none;
+      margin-bottom: 0;
+    }
 	}
 
 	img {
-		margin: 0.5em 1em 1.5em 1em;
+		// margin: 0.5em 1em 1.5em 1em;
 	}
 
 	.orbit img {
@@ -19,4 +26,8 @@
 	img.alignleft {
 		padding: 0;
 	}
+
+  div.mjp-s-wrapper.s-graphic {
+    padding-top: 1em;
+  }
 }

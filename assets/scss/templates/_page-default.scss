@@ -15,5 +15,20 @@
       @include grid-column(12);
     }
   }
+}
 
+.voigl_delimiter {
+  height: 0.2rem;
+  width: 100%;
+  margin: 2rem 0;
+  background: $light-gray;
+  position: relative;
+
+  img {
+    @include absolute-center;
+    width: 80px;
+    background: $white;
+    border: 10px solid $white;
+    box-shadow: none;
+  }
 }

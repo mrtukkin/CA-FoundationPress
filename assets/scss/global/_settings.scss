@@ -46,19 +46,18 @@
 @font-face {
   font-family: 'The Hand';
   font-style: normal;
-  font-weight: 400;
-  src: local('The Hand'), local('TheHand'), url(https://collegiumacademicum.de/web/wp-content/themes/foundationpress_2016-10-06_14-16/assets/fonts/the-hand-regular-9nov.otf) format('truetype');
+  font-weight: normal;
+  src: local('The Hand'),
+       local('TheHand'),
+       local('TheHandRegular'),
+       url('/wp-content/themes/foundationpress_2016-10-06_14-16/assets/fonts/the-hand-regular-9nov.woff') format('woff');
 }
 
 // 1. Global
 // ---------
 $foundation-palette: (
   primary: #B61C20, // CMYK: 0, 85.25, 81.97, 28.24
-  // LOGO: primary: #B71B21, // CMYK: 0, 85.25, 81.97, 28.24
-  // OLD: primary: #B71E24, // CMYK: 0, 85.25, 81.97, 28.24
   secondary: #32ACA2, // CMYK: 58.43, 0, 11.24, 30.2
-  // LOGO: secondary: #4AB29E, // CMYK: 58.43, 0, 11.24, 30.2
-  // OLD: secondary: #4AB29E, // CMYK: 58.43, 0, 11.24, 30.2
   success: #32B721,
   warning: #B75B21,
   alert: #6A1209,
@@ -80,7 +79,7 @@ $body-antialiased: true;
 $body-font-family: -apple-system, BlinkMacSystemFont, 'Source Sans Pro', sans-serif;
 $body-font-color: $black;
 $global-font-size: 100%;
-$global-lineheight: 1.5;
+$global-lineheight: 1.7;
 $global-weight-normal: normal;
 $global-weight-bold: 600;
 $global-text-direction: ltr;
@@ -123,7 +122,7 @@ $block-grid-max: 8;
 // ------------------
 $font-family-monospace: monospace;
 
-$header-font-family: 'The Hand', sans-serif;
+$header-font-family: 'The Hand', 'Courier New', 'Courier', sans-serif;
 $header-font-weight: normal;
 $header-sizes: (
   small: (
@@ -355,7 +354,7 @@ $label-radius: $global-radius;
 // ----------------
 
 $mediaobject-margin-bottom: $global-margin;
-$mediaobject-section-padding: $global-padding;
+$mediaobject-section-padding: $global-padding*3;
 $mediaobject-image-width-stacked: 100%;
 
 // 22. Menu
@@ -458,10 +457,10 @@ $tab-content-padding: 1rem;
 // 33. Thumbnail
 // -------------
 
-$thumbnail-border: solid 4px $white;
+$thumbnail-border: solid 2px $white;
 $thumbnail-margin-bottom: $global-margin;
 $thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
-$thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
+$thumbnail-shadow-hover: 0 0 0 2px rgba($primary-color, 0.4);
 $thumbnail-transition: box-shadow 200ms ease-out;
 $thumbnail-radius: $global-radius;
 

@@ -1,17 +1,17 @@
 // Page header
-//.home #masthead nav {
-//	height: 80vh;
-//	max-height: 700px;
-//
-//	.top-bar-title {
-//		top: 10vh;
-//	}
-//
-//	.top-bar-right {
-//		bottom: 30vh;
-//		top: initial;
-//	}
-//}
+.home #masthead nav {
+	height: 40vh;
+   min-height: 375px;
+
+	.top-bar-title {
+		bottom: 175px;
+	}
+
+	.top-bar-right {
+		bottom: 115px;
+		top: initial;
+	}
+}
 
 .home .container {
    overflow: hidden;
@@ -19,7 +19,6 @@
 
 .home section.intro {
 	@include grid-row();
-	margin-top: 3rem;
    overflow: visible;
 
   	.entry-content {
@@ -53,27 +52,28 @@
    .flex-video {
       overflow: visible;
       position: relative;
+      margin-top: 1.5rem;
 
-      &::before, &::after {
-         content: '';
-         display: block;
-         position: absolute;
-         background-size: 100% 100%;
-      }
-
-      &::after {
-         left: 77%;
-         top: 76%;
-         width: 50%;
-         height: 50%;
-      }
-
-      &::before {
-         left: -14%;
-         top: -15%;
-         width: 50%;
-         height: 50%;
-      }
+      // &::before, &::after {
+      //    content: '';
+      //    display: block;
+      //    position: absolute;
+      //    background-size: 100% 100%;
+      // }
+      //
+      // &::after {
+      //    left: 65%;
+      //    top: 55%;
+      //    width: 60%;
+      //    height: 60%;
+      // }
+      //
+      // &::before {
+      //    left: -14%;
+      //    top: -15%;
+      //    width: 50%;
+      //    height: 50%;
+      // }
    }
 
   	.row {
@@ -81,31 +81,29 @@
       margin-bottom: 3rem;
 
       h2 {
-         background: $secondary-color;
-         transition: 0.3s;
-         // border-color: $secondary-color;
-         // border-width: 3px 3px 0 3px;
-         // border-style: dashed;
-         font-size: 5rem;
-         color: $white;
-         // color: $black;
+         font-size: 5.5rem;
+         color: $black;
          padding-top: 0.3em;
-
-         &:hover {
-            background: $primary-color;
-            // border-color: $primary-color;
-         }
 
          &::after {
             @include breakpoint(medium) {
                @include grid-column(5);
-          	}
+            }
             content: '';
             position: absolute;
             background-repeat: no-repeat;
             background-size: 100%;
             background-position: 50% 50%;
+            transition: 0.3s;
          }
+      }
+
+      &:hover h2::after {
+         filter: drop-shadow(2px 2px 0 $primary-color);
+      }
+
+      &:hover h2:hover::after {
+         filter: drop-shadow(2px 2px 0 $secondary-color);
       }
 
       img {
@@ -119,11 +117,13 @@
          background: transparent;
          line-height: 1.8;
          text-align: right;
+         padding-bottom: 2em;
+         border-bottom: 15px solid $primary-color;
       }
 
       &.wohnen, &.nachhaltigkeit {
          h2 {
-            padding-left: 5rem;
+            // padding-left: 5rem;
 
             &::after {
                right: 0.5rem;
@@ -138,7 +138,7 @@
 
       &.bildung, &.selbstverwaltung {
          h2 {
-            padding-right: 4rem;
+            // padding-right: 4rem;
             text-align: right;
 
             &::after {
@@ -149,4 +149,22 @@
          }
       }
   	}
+}
+
+.brochure_button {
+   display: none;
+}
+
+.home .brochure_button {
+   position: absolute;
+   display: block;
+   top: 1em;
+   // background: $primary-color;
+   font-weight: $global-weight-bold;
+   font-size: 16px;
+   line-height: 15px;
+   text-align: center;
+   color: $white;
+   border-radius: 50%;
+   padding: 40px 10px;
 }

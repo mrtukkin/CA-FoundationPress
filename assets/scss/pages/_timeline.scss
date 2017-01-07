@@ -65,6 +65,9 @@
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
       line-height: 1.2em;
 
+      &:hover {
+      }
+
       i {
         font-style: normal;
         font-weight: $global-weight-bold;

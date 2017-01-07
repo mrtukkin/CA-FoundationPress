@@ -31,8 +31,12 @@
            <?php wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
            <p><?php the_tags(); ?></p>
        </footer>
+       <div class="voigl_delimiter">
+          <img src="<?php echo get_bloginfo('template_url') ?>/assets/images/red_voigl.svg.png" />
+       </div>
    </article>
  <?php endwhile;?>
+
 
  <?php do_action( 'foundationpress_after_content' ); ?>
 

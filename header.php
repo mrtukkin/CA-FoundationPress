@@ -55,5 +55,9 @@
 		</nav>
 	</header>
 
+  <div class="brochure_button button">
+    Infobroschüre<br />hier!
+  </div>
+
 	<section class="container">
 		<?php do_action( 'foundationpress_after_header' );

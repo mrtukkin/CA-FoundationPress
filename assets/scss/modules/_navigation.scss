@@ -33,8 +33,7 @@ $logo-height: 150px;
 .top-bar {
   position: relative;
   height: $logo-height + 100px;
-  background-position: center;
-  background-position-y: -240px;
+  background-position: center top;
   background-repeat: no-repeat;
 
   .top-bar-title {
@@ -89,8 +88,14 @@ $logo-height: 150px;
     }
   }
 
-  .menu>li:not(.menu-text)>a { padding: 1rem; }
-  .menu li:not(:last-child) { border-right: 1px solid $light-gray; }
+  .menu>li:not(.menu-text)>a {
+    padding: 1rem;
+  }
+
+  .submenu.menu>li:not(.menu-text)>a {
+    padding: 0.5rem 1rem;
+    height: auto;
+  }
 
   .dropdown.menu .submenu {
     background-color: $light-gray;
@@ -98,8 +103,13 @@ $logo-height: 150px;
     border: 0;
   }
 
-  .dropdown.menu .has-submenu.is-down-arrow a { padding-right: 1rem; }
-  .dropdown.menu .has-submenu.is-down-arrow > a::after { border: 0; }
+  .dropdown.menu .has-submenu.is-down-arrow a {
+    padding-right: 1rem;
+  }
+
+  .dropdown.menu .has-submenu.is-down-arrow > a::after {
+    border: 0;
+  }
 
   .dropdown.menu:first-child >
     li.is-dropdown-submenu-parent >

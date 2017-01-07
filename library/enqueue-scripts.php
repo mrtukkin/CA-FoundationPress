@@ -9,6 +9,8 @@
  * @since FoundationPress 1.0.0
  */
 
+
+
 if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	function foundationpress_scripts() {
 
@@ -33,4 +35,19 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	}
 
 	add_action( 'wp_enqueue_scripts', 'foundationpress_scripts' );
+endif;
+
+if ( ! function_exists( 'add_async_attribute' ) ) :
+function add_async_attribute($tag, $handle) {
+	// add script handles to the array below
+	$scripts_to_async = array('comment-reply', 'jquery-ui-core', 'datepicker', 'jquery-ui-widget', 'jquery-ui-position', 'jquery-ui-mouse', 'jquery-ui-sortable', 'jquery-ui-datepicker');
+
+	foreach($scripts_to_async as $async_script) {
+		 if ($async_script === $handle) {
+				return str_replace(' src', ' async="async" src', $tag);
+		 }
+	}
+	return $tag;
+}
+// add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
 endif;
