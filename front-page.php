@@ -28,12 +28,14 @@
 
 <section class="intro" role="main">
 
-	<div class="callout success" style="margin-top: 2em;" data-closable>
-		<h3><a href="https://www.facebook.com/events/1844827329119961/">Kennenlerntreffen</a> am 19.Januar</h3>
-		<button class="close-button" aria-label="Dismiss alert" type="button" data-close>
-			<span aria-hidden="true">&times;</span>
-		</button>
-	</div>
+    <div class="row">
+        <!-- <div class="small-6 medium-4 columns"> -->
+        <div class="small-12 columns">
+			<a class="button large expanded hollow" href="http://collegiumacademicum.de/die-projektbroschuere/">Infobroschüre ansehen</a>
+        </div>
+        <!-- <div class="small-6 medium-8 columns">
+        </div> -->
+    </div>
 
 	<iframe style="border: 0;" src="http://player.vimeo.com/video/191458892" allowfullscreen="allowfullscreen"></iframe>
 
@@ -64,10 +66,6 @@
 				Selbstentfaltung durch Selbstbestimmung!
 	    	Unabhängig, gemeinschaftlich und offen – das ist das CA durch konsensorientierte und transparente Strukturen in einer demokratisch organisierten Selbstverwaltung.
 			</p>
-	</div>
-
-	<div class="callout secondary" style="margin-top: 0em;">
-		<h3>Jetzt <a href="http://collegiumacademicum.de/die-projektbroschuere/">Infobroschüre</a> ansehen.</h3>
 	</div>
 
 	<?php mailchimpSF_signup_form(); ?>
