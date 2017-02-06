@@ -23,11 +23,15 @@
         }
     }
 
-    p {
+    p, .inner {
         @include breakpoint(medium) {
             padding: 0 15%;
         }
         margin-bottom: 2rem;
+
+        li {
+            margin-bottom: 0.7rem;
+        }
     }
 
     blockquote {

@@ -28,9 +28,9 @@
 
 <section class="intro" role="main">
 
-    <div class="row">
+    <div class="row" style="margin-bottom: 1em;">
         <!-- <div class="small-6 medium-4 columns"> -->
-        <div class="small-12 columns">
+        <div class="small-12 medium-4 medium-offset-8 columns">
 			<a class="button large expanded hollow" href="http://collegiumacademicum.de/die-projektbroschuere/">Infobroschüre ansehen</a>
         </div>
         <!-- <div class="small-6 medium-8 columns">
