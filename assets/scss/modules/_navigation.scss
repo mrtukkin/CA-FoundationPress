@@ -51,6 +51,7 @@ $logo-height: 150px;
   .top-bar-right {
     float: none;
     background-color: rgba($white, 0.9);
+    z-index: 1;
   }
 
   @include breakpoint(medium) {
