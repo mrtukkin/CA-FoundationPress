@@ -1,3 +1,5 @@
+# -DEPRECATED- THIS IS THE OLD TEMPLATE AND SHOULD NOT BE TOUCHED WITHOUT GLOVES AND SECURITY DISTANCE
+
 # CA-FoundationPress [![Build Status](https://travis-ci.org/mrtukkin/CA-FoundationPress.svg?branch=master)](https://travis-ci.org/mrtukkin/CA-FoundationPress)
 
 This is the current deployed theme for the [Collegium Academicum Website](http://collegiumacademicum.de). It's based on the fork of olefredriks FoundationPress Basetemplate which is based on Foundation 6 by Zurb.
